@@ -1,0 +1,22 @@
+pipeline {
+    agent any // Instructs Jenkins to run the pipeline on any available agent
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building the application...' // Example build step
+                // Add your build commands here (e.g., sh 'make all', bat 'msbuild.bat')
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing the application...' // Example test step
+                // Add your test commands here (e.g., sh 'mvn test')
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying the application...' // Example deploy step
+            }
+        }
+    }
+}
